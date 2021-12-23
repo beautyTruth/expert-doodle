@@ -4,6 +4,8 @@ const passwordCheck = document.querySelector(".password-check");
 
 passwordInput.addEventListener("input", updateStrengther);
 
+// the function that updates the bar on the left
+
 function updateStrengther() {
   const assessments = calculatePasswordStrength(passwordInput.value);
 
