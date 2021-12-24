@@ -138,9 +138,14 @@ function updateStrengthener() {
 
 function calculatePasswordStrength(password) {
   const assessment = [];
+  console.log(assessment);
   assessment.push(lengthAssessment(password));
+  assessment.push(lowercaseAssessment(password));
+  assessment.push(uppercaseAssessment(password));
   return assessment;
 }
+
+// length assessment function
 
 function lengthAssessment(password) {
   const length = password.length;
@@ -156,6 +161,46 @@ function lengthAssessment(password) {
     return {
       pwdCheck: "maybe a little longer?",
       strengthLost: 15,
+    };
+  }
+}
+
+// lowercase assessment function
+
+function lowercaseAssessment(password) {
+  const characterMatch = password.match(/[a-z]/g) || [];
+
+  if (characterMatch.length === 0) {
+    return {
+      pwdCheck: "needs lowercase",
+      strengthLost: 20,
+    };
+  }
+
+  if (characterMatch.length <= 2) {
+    return {
+      pwdCheck: "maybe more lowercase?",
+      strengthLost: 5,
+    };
+  }
+}
+
+// lowercase assessment function
+
+function uppercaseAssessment(password) {
+  const characterMatch = password.match(/[A-Z]/g) || [];
+
+  if (characterMatch.length === 0) {
+    return {
+      pwdCheck: "needs UPPERCASE",
+      strengthLost: 20,
+    };
+  }
+
+  if (characterMatch.length <= 2) {
+    return {
+      pwdCheck: "maybe more UPPERCASE?",
+      strengthLost: 5,
     };
   }
 }
