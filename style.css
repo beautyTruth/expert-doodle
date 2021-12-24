@@ -25,6 +25,9 @@ section {
   background-color: #162447;
   height: 600px;
   width: 400px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 128, 0.137),
+    -5px -5px 20px 5px rgba(0, 0, 128, 0.137);
 
   display: flex;
 }
@@ -35,7 +38,7 @@ section > div {
   justify-content: flex-start;
 }
 
-.strengther {
+.strengthener {
   height: 100%;
   width: 20px;
   background-color: white;
@@ -43,7 +46,7 @@ section > div {
   position: relative;
 }
 
-.strengther::after {
+.strengthener::after {
   /* --strength-amount: 10; */
   content: "";
   position: absolute;
