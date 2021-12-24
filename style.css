@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Josefin+Sans:wght@100;200;300;500;600;700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Fira Sans", Futura, Arial, Helvetica, sans-serif;
   height: 100vh;
 
   display: flex;
@@ -15,9 +17,10 @@ body {
 }
 
 h1 {
+  margin-top: 50px;
   margin-bottom: 50px;
   font-size: 40px;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 section {
